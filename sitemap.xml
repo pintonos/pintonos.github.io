@@ -35,9 +35,6 @@
     <loc>https://pintonos.github.io/home-unused/featured/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://pintonos.github.io/home-unused/publications/</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://pintonos.github.io/home-unused/tags/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -54,6 +51,30 @@
   </url><url>
     <loc>https://pintonos.github.io/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication-type/1/</loc>
+    <lastmod>2022-09-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication_types/</loc>
+    <lastmod>2022-09-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication/</loc>
+    <lastmod>2022-09-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication/peintner-cars-2022/</loc>
+    <lastmod>2022-09-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication/benning-2022-cancers/</loc>
+    <lastmod>2022-02-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://pintonos.github.io/publication/mayerl-2021-mediaeval/</loc>
+    <lastmod>2021-02-20T08:38:33+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://pintonos.github.io/tag/academic/</loc>
@@ -88,6 +109,10 @@
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://pintonos.github.io/publication/benning-2020-scientific/</loc>
+    <lastmod>2020-02-20T08:38:33+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://pintonos.github.io/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,10 +123,6 @@
   </url><url>
     <loc>https://pintonos.github.io/publication-unused/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://pintonos.github.io/publication_types/</loc>
-    <lastmod>2021-08-20T08:38:33+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://pintonos.github.io/publication-unused/</loc>
@@ -122,18 +143,6 @@
   </url><url>
     <loc>https://pintonos.github.io/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://pintonos.github.io/publication-type/1/</loc>
-    <lastmod>2021-08-20T08:38:33+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://pintonos.github.io/publication/gcnext/</loc>
-    <lastmod>2021-08-20T08:38:33+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://pintonos.github.io/publication/</loc>
-    <lastmod>2021-08-20T08:38:33+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://pintonos.github.io/tag/deep-learning/</loc>
