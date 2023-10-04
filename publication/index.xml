@@ -5,7 +5,7 @@
     <link>https://pintonos.github.io/publication/</link>
       <atom:link href="https://pintonos.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 20 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://pintonos.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
@@ -13,34 +13,10 @@
     </image>
     
     <item>
-      <title>Unsupervised Graph Embeddings for Session-based Recommendation with Item Features</title>
-      <link>https://pintonos.github.io/publication/peintner-cars-2022/</link>
-      <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://pintonos.github.io/publication/peintner-cars-2022/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Advances in and the Applicability of Machine Learning-Based Screening and Early Detection Approaches for Cancer: A Primer</title>
-      <link>https://pintonos.github.io/publication/benning-2022-cancers/</link>
-      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://pintonos.github.io/publication/benning-2022-cancers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recognizing Song Mood and Theme: Clustering-based Ensembles</title>
-      <link>https://pintonos.github.io/publication/mayerl-2021-mediaeval/</link>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      <guid>https://pintonos.github.io/publication/mayerl-2021-mediaeval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automated spheroid generation, drug application and efficacy screening using a deep learning classification: a feasibility study</title>
-      <link>https://pintonos.github.io/publication/benning-2020-scientific/</link>
-      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://pintonos.github.io/publication/benning-2020-scientific/</guid>
+      <title>Information Imbalance and Responsibility in Recommender Systems</title>
+      <link>https://pintonos.github.io/publication/gcnext/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://pintonos.github.io/publication/gcnext/</guid>
       <description></description>
     </item>
     
