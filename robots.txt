@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://pintonos.github.io/sitemap.xml
