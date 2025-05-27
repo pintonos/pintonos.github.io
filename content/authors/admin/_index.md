@@ -43,94 +43,108 @@ interests:
   - Information Retrieval
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: PhD Computer Science
+    institution: University of Innsbruck
+    date_start: 2021-10-01
+    date_end: ''
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
+      Thesis: Sequential Recommendation: A Graph-based Perspective  
+      Advisor: Eva Zangerle, PhD
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: MSc Computer Science
+    institution: University of Innsbruck
+    date_start: 2018-01-01
+    date_end: 2021-01-01
     summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Thesis: Acceleration and Compression of Deep Click-Through Rate Prediction Models  
+      Advisor: Eva Zangerle, PhD
+
+  - area: BSc Computer Science
+    institution: University of Innsbruck
+    date_start: 2015-01-01
+    date_end: 2018-01-01
+    summary: |
+      Thesis: Lowering the Barrier of Cyber Attacks through Information Shared on Security Experts Forums  
+      Advisor: Clemens Sauerwein, PhD
+
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: AI Engineering Lead
+    company_name: doc2me (formerly femble)
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2023-07-01
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
+      - Research & Development of personalized sequential recommendation model  
+      - Integration via Cloud Services: AWS, PyTorch, Spark, Svelte
+
+  - position: Assistant Teacher
+    company_name: University of Innsbruck, Department of Computer Science
     company_url: ''
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    date_start: 2021-10-01
+    date_end: ''
+    summary: |2-
+      - Teaching classes: Database Systems, Machine Learning  
+      - Grading and assisting students with homework, projects, and presentations
+
+  - position: Data Science Intern
+    company_name: MARS, Verden/Germany
+    company_url: ''
+    company_logo: ''
+    date_start: 2021-04-01
+    date_end: 2021-07-01
+    summary: |2-
+      - Instance segmentation with deep learning  
+      - Web application development to interact with deployed models  
+      - 1st place at internal hackathon for predicting pet age  
+
+  - position: Software Developer
+    company_name: SPEED U UP, Innsbruck/Austria
+    company_url: ''
+    company_logo: ''
+    date_start: 2019-02-01
+    date_end: 2021-03-01
+    summary: |2-
+      - Voice assistant applications (Alexa Skills & Google Actions), NLP  
+      - Web development with HTML, CSS, Javascript  
+      - iOS app development with Swift  
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical Skills
-    items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+# https://icons.hugomods.com/?#search
+# skills:
+#   - name: Technical Skills
+#     items:
+#       - name: Python
+#         description: ''
+#         percent: 80
+#         icon: code-bracket
+#       - name: Data Science
+#         description: ''
+#         percent: 100
+#         icon: chart-bar
+#       - name: SQL
+#         description: ''
+#         percent: 40
+#         icon: circle-stack
+#   - name: Hobbies
+#     color: '#eeac02'
+#     color_border: '#f0bf23'
+#     items:
+#       - name: Tennis
+#         description: ''
+#         percent: 60
+#         icon: tennis
+#       - name: BJJ
+#         description: ''
+#         percent: 100
+#         icon: cat
+#       - name: Gym
+#         description: ''
+#         percent: 80
+#         icon: weight-lifter
 
 languages:
   - name: English
@@ -172,4 +186,4 @@ awards:
 
 ## About Me
 
-Hello! My name is Andreas Peintner and I am a second-year PhD student in Computer Science at the University of Innsbruck, who is supervised by [Eva Zangerle, Phd](https://evazangerle.at/). My research interests include sequential recommendation, music information retrieval and graph neural networks.
+Hello! My name is Andreas Peintner and I am a fourth-year PhD student in Computer Science at the University of Innsbruck, who is supervised by [Dr. Eva Zangerle](https://evazangerle.at/). My research interests include sequential recommendation, music information retrieval and graph neural networks.
