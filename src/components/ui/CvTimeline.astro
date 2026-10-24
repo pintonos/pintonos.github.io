@@ -11,17 +11,17 @@ const { elements, colored } = Astro.props
 ---
 
 <ul
-	class='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'
+	class='timeline timeline-compact timeline-vertical'
 >
 	{
-		elements.map((element, index) => (
-			<li>
+		elements.map((element) => (
+			<li class='[--timeline-row-start:0.4rem] [--timeline-row-end:minmax(0,1fr)]'>
 				<div class='timeline-middle'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 20 20'
 						fill='currentColor'
-            class:list={[{ 'text-accent': colored }, 'h-5 w-5']}
+            class:list={[{ 'text-primary': colored }, 'h-5 w-5']}
 					>
 						<path
 							fill-rule='evenodd'
@@ -31,15 +31,14 @@ const { elements, colored } = Astro.props
 					</svg>
 				</div>
 				<div
-					class={`${index % 2 === 0 ? 'timeline-start' : 'timeline-end'} mb-10 md:text-end`}
+					class='timeline-end self-start mb-10'
 				>
-					<time class='font-mono italic'>{element.time}</time>
-					<div class='text-lg font-black'>{isExperience(element) ? element.title : element.degree}</div>
-					<div>{element.description}</div>
-					<div>{isExperience(element) ? element.company : element.school}</div>
-					<div>{element.location}</div>
+					<time class='text-sm font-semibold text-primary'>{element.time}</time>
+					<div class='text-lg font-bold'>{isExperience(element) ? element.title : element.degree}</div>
+					<div class='font-medium'>{isExperience(element) ? element.company : element.school} <span class='text-base-content/60 font-normal'>· {element.location}</span></div>
+					<div class='text-base-content/80 mt-1'>{element.description}</div>
 				</div>
-        <hr class:list={[{ 'bg-accent': colored }]} />
+        <hr class:list={[{ 'bg-primary/40': colored }]} />
 			</li>
 		))
 	}

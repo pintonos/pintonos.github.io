@@ -2,38 +2,74 @@
 
 @plugin "@tailwindcss/typography";
 
+@layer base {
+  /* Tailwind v4 defaults borders to currentColor, which renders as hard black rules. */
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-base-300);
+  }
+}
+
 @plugin "daisyui" {
-  themes:
-    light,
-    dark,
-    cupcake,
-    bumblebee,
-    emerald,
-    corporate,
-    synthwave,
-    retro,
-    cyberpunk,
-    valentine,
-    halloween,
-    garden,
-    forest,
-    aqua,
-    lofi,
-    pastel,
-    fantasy,
-    wireframe,
-    black,
-    luxury,
-    dracula,
-    cmyk,
-    autumn,
-    business,
-    acid,
-    lemonade,
-    night,
-    coffee,
-    winter,
-    dim,
-    nord,
-    sunset;
+  themes: false;
+}
+
+/* Palette: emerald/teal primary (as on the old Hugo site), blue secondary (from the profile photo). */
+@plugin "daisyui/theme" {
+  name: "peintner-light";
+  default: true;
+  color-scheme: light;
+  --color-base-100: oklch(99% 0.004 160);
+  --color-base-200: oklch(96.5% 0.01 160);
+  --color-base-300: oklch(92% 0.015 160);
+  --color-base-content: oklch(26% 0.025 255);
+  --color-primary: oklch(50% 0.115 165);
+  --color-primary-content: oklch(98% 0.01 165);
+  --color-secondary: oklch(50% 0.12 250);
+  --color-secondary-content: oklch(98% 0.01 250);
+  --color-accent: oklch(52% 0.11 200);
+  --color-accent-content: oklch(98% 0.01 200);
+  --color-neutral: oklch(32% 0.03 255);
+  --color-neutral-content: oklch(96% 0.01 255);
+  --color-info: oklch(60% 0.13 240);
+  --color-success: oklch(60% 0.14 150);
+  --color-warning: oklch(80% 0.14 85);
+  --color-error: oklch(58% 0.19 25);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "peintner-dark";
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: oklch(21% 0.022 255);
+  --color-base-200: oklch(25% 0.024 255);
+  --color-base-300: oklch(30% 0.026 255);
+  --color-base-content: oklch(93% 0.01 250);
+  --color-primary: oklch(76% 0.13 165);
+  --color-primary-content: oklch(22% 0.03 165);
+  --color-secondary: oklch(76% 0.1 250);
+  --color-secondary-content: oklch(22% 0.03 250);
+  --color-accent: oklch(78% 0.1 200);
+  --color-accent-content: oklch(22% 0.03 200);
+  --color-neutral: oklch(88% 0.01 250);
+  --color-neutral-content: oklch(24% 0.02 255);
+  --color-info: oklch(72% 0.12 240);
+  --color-success: oklch(72% 0.14 150);
+  --color-warning: oklch(82% 0.14 85);
+  --color-error: oklch(70% 0.17 25);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }

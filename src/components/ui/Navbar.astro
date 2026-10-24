@@ -1,47 +1,39 @@
 ---
-import { Image } from 'astro:assets'
 import {profile} from '../../settings'
 import SocialIcons from './SocialIcons.astro'
-import ProfilePictures from '@/assets/profile_pictures.jpg'
 import { getCollection } from 'astro:content'
 import { template } from '@/settings'
 
 const isBlogPopulated = await getCollection('blog').then(collection => collection.length > 0)
 
-const {fullName, title} = profile
+const {fullName, title, credential} = profile
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/'
+const links = [
+	{ href: '/', label: 'Home' },
+	{ href: '/research', label: 'Research' },
+	{ href: '/papers', label: 'Papers' },
+	{ href: '/cv', label: 'CV' },
+	...(isBlogPopulated ? [{ href: '/blog/1', label: 'Blog' }] : []),
+]
+const isActive = (href: string) => href === '/' ? path === '/' : path.startsWith(href.replace(/\/1$/, ''))
 ---
 <aside
 	class='px-4 pt-4 h-screen w-[20rem] bg-base-200 text-base-content flex flex-col'
 >
 	<div class='flex flex-col my-8 justify-between h-full'>
 		<div>
-			<div class='flex justify-center items-center flex-col'>
-				<Image
-					class='mask mask-circle size-44'
-					src={ProfilePictures}
-					alt={`Profile picture of ${fullName}`}
-				/>
-				<h1 class="text-lg font-black mt-8 hidden lg:block">{title} <span>{fullName}</span></h1>
+			<div class='flex flex-col px-4'>
+				<p class='text-2xl font-black leading-tight'>{fullName}</p>
+				<p class='text-sm text-base-content/70 mt-1'>{title} · {credential}</p>
 			</div>
-			<div class='mx-4 mt-16'>
-				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto'>
-					<li>
-                        <a href={`${template.base}/`} class='text-lg'>Home</a>
-					</li>
-					<li>
-                        <a href={`${template.base}/research`} class='text-lg'>Research</a>
-					</li>
-					<li>
-                        <a href={`${template.base}/papers`} class='text-lg'>Papers</a>
-					</li>
-					<li>
-                        <a href={`${template.base}/cv`} class='text-lg'>CV</a>
-                    </li>
-                    {isBlogPopulated &&
-					<li>
-                        <a href={`${template.base}/blog/1`} class='text-lg'>Blog</a>
-</li>
-                    }
+			<div class='mx-2 mt-10'>
+				<ul class='space-y-2 menu grow shrink menu-md overflow-y-auto w-full'>
+					{links.map(({ href, label }) => (
+						<li>
+							<a href={`${template.base}${href}`} class:list={['text-lg', { 'bg-primary/15 text-primary font-semibold': isActive(href) }]} aria-current={isActive(href) ? 'page' : undefined}>{label}</a>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>

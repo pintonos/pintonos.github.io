@@ -23,7 +23,7 @@ const ALL_PAPERS = publications;
             <div id={`paper-${index + 1}`} class="card bg-base-200 scroll-mt-8 not-prose">
               <div class="card-body p-6">
                 <h2 class="card-title text-xl font-bold leading-snug">
-                  <a href={paperUrl} target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+                  <a href={paperUrl} target="_blank" rel="noopener noreferrer" class="text-base-content hover:text-primary transition-colors">
                     {paper.title}
                   </a>
                 </h2>
@@ -33,6 +33,7 @@ const ALL_PAPERS = publications;
                 </p>
                 <p class="text-sm text-base-content/70 mb-2">
                   <span class="italic font-medium">{paper.journal}</span> • {paper.time}
+                  {paper.award && <span class="badge badge-primary badge-soft badge-sm ml-2 not-italic font-semibold">🏆 {paper.award}</span>}
                 </p>
                 {paper.abstract && (
                   <p class="text-sm text-base-content/80 mt-2 mb-0">{paper.abstract}</p>
@@ -56,7 +57,7 @@ const ALL_PAPERS = publications;
                       href={paper.bibtex}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn btn-sm btn-outline"
+                      class="btn btn-sm btn-ghost border-base-300"
                     >
                       BibTeX
                     </a>
@@ -66,7 +67,7 @@ const ALL_PAPERS = publications;
                       href={paperUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="btn btn-sm btn-secondary text-secondary-content"
+                      class="btn btn-sm btn-primary"
                     >
                       Read Paper
                     </a>

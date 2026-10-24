@@ -4,15 +4,15 @@ import { Image } from 'astro:assets'
 import SocialIcons from './SocialIcons.astro'
 
 
-const {fullName, title, institute, profilePicture} = Astro.props
+const {fullName, title, credential, institute, profilePicture} = Astro.props
 ---
-<div class='flex-1'>
+<div class='flex-1 min-w-0'>
   <h1 class='text-4xl font-bold mb-4'>
-    Welcome! I'm <span class='text-secondary'>{fullName}</span>
+    Welcome! I'm <span class='text-primary'>{fullName}</span>
   </h1>
-  <p class='text-xl text-base-content/80 mb-4 font-medium'>{title}{institute ? ` at ${institute}` : ''}</p>
+  <p class='text-xl text-base-content/80 mb-4 font-medium'>{title}{institute ? ` at ${institute}` : ''}{credential ? ` · ${credential}` : ''}</p>
   <p class='text-lg mb-6 leading-relaxed'>
-    I am an AI Engineer and PhD Candidate in Computer Science at the University of Innsbruck, supervised by <a href="https://evazangerle.at/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Dr. Eva Zangerle</a>. My research focuses on sequential recommendation, graph neural networks, and music information retrieval, alongside developing real-world recommendation models at doc2me.
+    I lead AI engineering at <a href="https://doc2me.co/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">doc2me</a>, a content platform that helps healthcare brands work with trusted medical experts on social media. I build the agentic AI that turns raw expert recordings into polished, engaging videos. I come from machine learning research: I earned my PhD in Computer Science at the University of Innsbruck (2026) under <a href="https://evazangerle.at/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Dr. Eva Zangerle</a>, working on sequential recommendation, graph neural networks, and music information retrieval.
   </p>
   <div class='flex flex-wrap items-center gap-4 mb-6'>
     <a href='/uploads/resume.pdf' target='_blank' download class='btn btn-sm btn-primary'>
@@ -26,11 +26,16 @@ const {fullName, title, institute, profilePicture} = Astro.props
     <SocialIcons />
   </div>
 </div>
-<div class='size-72 lg:block hidden shrink-0'>
+<div class='shrink-0'>
   <!-- Profile image -->
   <Image
     src={profilePicture}
-    alt={fullName}
-    class='w-full h-full mask mask-circle size-44 object-cover'
+    alt={`Portrait of ${fullName}`}
+    width={576}
+    height={576}
+    widths={[224, 288, 448, 576]}
+    sizes='(min-width: 1024px) 18rem, 14rem'
+    loading='eager'
+    class='size-56 lg:size-72 rounded-full object-cover object-[50%_22%] ring-4 ring-primary/25 ring-offset-4 ring-offset-base-100 shadow-lg'
   />
 </div>

@@ -1,6 +1,6 @@
 # Andreas Peintner - Personal Website
 
-Personal and academic website for **Andreas Peintner** (AI Engineer & PhD Candidate at University of Innsbruck), ported to **Astro** using the [Astro Academia](https://github.com/maiobarbero/astro_academia) template and deployed on **GitHub Pages**.
+Personal and academic website for **Andreas Peintner** (AI Engineering Lead at doc2me, PhD in Computer Science), ported to **Astro** using the [Astro Academia](https://github.com/maiobarbero/astro_academia) template and deployed on **GitHub Pages**.
 
 ## Features
 

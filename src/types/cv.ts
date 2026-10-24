@@ -24,10 +24,18 @@ export interface Publication {
   authors: string;
   journal: string;
   time: string;
+  /** Month of publication (1-12), used to order papers within a year. */
+  month?: number;
   link?: string;
   abstract?: string;
   pdf?: string;
   bibtex?: string;
+  /** Show under "Key Research Highlights" on the research page. */
+  featured?: boolean;
+  /** Award shown as a badge, e.g. "Best Short Paper". */
+  award?: string;
+  /** One-line description used for featured papers. */
+  summary?: string;
 }
 
 export function isExperience(element: Experience | Education): element is Experience {
