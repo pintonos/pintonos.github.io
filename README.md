@@ -19,16 +19,16 @@ Personal and academic website for **Andreas Peintner** (AI Engineer & PhD Candid
 ### Prerequisites
 
 - Node.js (version 20+ recommended, see `.nvmrc`)
-- npm
+- pnpm (version 10+)
 
 ### Installation & Development
 
 ```bash
 # Install dependencies
-npm ci
+pnpm install
 
 # Start local development server
-npm run dev
+pnpm dev
 ```
 
 Visit `http://localhost:4321` to view the website locally.
@@ -37,19 +37,19 @@ Visit `http://localhost:4321` to view the website locally.
 
 ```bash
 # Run unit & search tests
-npm test
+pnpm test
 
 # Check types and Astro components
-npm run check
+pnpm check
 
 # Lint files
-npm run lint
+pnpm lint
 
 # Build static output for production
-npm run build
+pnpm build
 
 # Preview production build locally
-npm run preview
+pnpm preview
 ```
 
 ## Deployment to GitHub Pages
