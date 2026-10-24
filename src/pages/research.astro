@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { profile } from "@/settings";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+
+const { research_areas } = profile;
+---
+
+<Layout title="Research | Andreas Peintner">
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-8">Research Statement</h1>
+
+    <div class="mb-12">
+      <p class="text-lg mb-6 leading-relaxed">
+        My research investigates machine learning models for sequential and session-based recommendation from a graph-based perspective. Modern recommender systems must capture intricate temporal dynamics, short-term user intent, and long-term behavioral patterns. By formulating item interactions as graphs and hypergraphs, we can effectively discover multi-hop dependencies, repeated intent, and complex transition structures across user sessions.
+      </p>
+      <p class="text-lg mb-6 leading-relaxed">
+        In parallel, I explore Music Information Retrieval (MIR) and emotion recognition, applying multi-relational graph neural networks to model nuanced affective qualities from subjective listener annotations, tag structures, and audio representations.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
+    <div class="grid gap-8 mb-12">
+      {
+        research_areas.map((area) => (
+          <div class="flex gap-6 items-start">
+            <BetterIcon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                class="size-6 stroke-accent"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d={RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]?.path || RESEARCH_ICONS['computer-science'].path}
+                />
+              </svg>
+            </BetterIcon>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">{area.title}</h3>
+              <p class="text-base text-base-content/80">{area.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <List listTitle="Key Research Highlights & Projects" listItems={[
+      {
+        title: "Hypergraph-based Temporal Modelling of Repeated Intent",
+        description: "Modeling repeated user intent and higher-order relations for sequential recommendation (ACM Web Conference / WWW 2025)."
+      },
+      {
+        title: "SPARE: Efficient Session-based Recommendation",
+        description: "Shortest-path global item relations and contrastive learning for scalable session recommendations (RecSys 2023 & ACM TORS 2024)."
+      },
+      {
+        title: "Nuanced Music Emotion Recognition via GNNs",
+        description: "Semi-supervised multi-relational graph neural networks to capture subtle emotion spaces from quality annotations (TISMIR 2025)."
+      },
+      {
+        title: "Evaluating Recommender Explainers",
+        description: "Investigating whether recommender performance shifts explainability metrics (ACM RecSys 2024)."
+      }
+    ]} />
+
+    <h2 class="text-2xl font-bold mb-6 mt-12">Impact & Applications</h2>
+    <p class="text-lg mb-6 leading-relaxed">
+      Our research is published in top-tier venues including WWW, ACM RecSys, ACM TORS, UMAP, and TISMIR. Furthermore, these techniques are directly applied in production recommender systems at doc2me, bridging academic advancements with real-world machine learning systems.
+    </p>
+  </div>
+</Layout>

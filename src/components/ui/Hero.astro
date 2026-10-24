@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+
+import SocialIcons from './SocialIcons.astro'
+
+
+const {fullName, title, institute, profilePicture} = Astro.props
+---
+<div class='flex-1'>
+  <h1 class='text-4xl font-bold mb-4'>
+    Welcome! I'm <span class='text-secondary'>{fullName}</span>
+  </h1>
+  <p class='text-xl text-base-content/80 mb-4 font-medium'>{title}{institute ? ` at ${institute}` : ''}</p>
+  <p class='text-lg mb-6 leading-relaxed'>
+    I am an AI Engineer and PhD Candidate in Computer Science at the University of Innsbruck, supervised by <a href="https://evazangerle.at/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-medium">Dr. Eva Zangerle</a>. My research focuses on sequential recommendation, graph neural networks, and music information retrieval, alongside developing real-world recommendation models at doc2me.
+  </p>
+  <div class='flex flex-wrap items-center gap-4 mb-6'>
+    <a href='/uploads/resume.pdf' target='_blank' download class='btn btn-sm btn-primary'>
+      Download CV
+    </a>
+    <a href='/papers' class='btn btn-sm btn-outline'>
+      Publications
+    </a>
+  </div>
+  <div class='flex gap-4'>
+    <SocialIcons />
+  </div>
+</div>
+<div class='size-72 lg:block hidden shrink-0'>
+  <!-- Profile image -->
+  <Image
+    src={profilePicture}
+    alt={fullName}
+    class='w-full h-full mask mask-circle size-44 object-cover'
+  />
+</div>

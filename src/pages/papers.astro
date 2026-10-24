@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { publications } from "@/data/cv";
+import { highlightAuthor } from "@/lib/utils";
+import { template } from "@/settings";
+
+const ALL_PAPERS = publications;
+---
+
+<Layout title="Publications | Andreas Peintner">
+  <div class="prose max-w-none">
+    <div class="flex justify-between items-center mb-8 border-b pb-4">
+      <h1 class="text-3xl font-bold m-0">Publications</h1>
+      <span class="text-sm text-base-content/70">{ALL_PAPERS.length} papers</span>
+    </div>
+
+    <div class="space-y-6">
+      {
+        ALL_PAPERS.map((paper, index) => {
+          const rawLink = paper.link ?? '';
+          const paperUrl = rawLink.startsWith('http') ? rawLink : template.base + rawLink;
+          return (
+            <div id={`paper-${index + 1}`} class="card bg-base-200 scroll-mt-8 not-prose">
+              <div class="card-body p-6">
+                <h2 class="card-title text-xl font-bold leading-snug">
+                  <a href={paperUrl} target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+                    {paper.title}
+                  </a>
+                </h2>
+                <p class="text-base text-base-content/90 mb-1">
+                  <span class="font-medium text-base-content">Authors:</span>{" "}
+                  <span set:html={highlightAuthor(paper.authors)} />
+                </p>
+                <p class="text-sm text-base-content/70 mb-2">
+                  <span class="italic font-medium">{paper.journal}</span> • {paper.time}
+                </p>
+                {paper.abstract && (
+                  <p class="text-sm text-base-content/80 mt-2 mb-0">{paper.abstract}</p>
+                )}
+                <div class="card-actions justify-end gap-2 mt-4">
+                  {paper.pdf && (
+                    <a
+                      href={paper.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-sm btn-outline btn-primary"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      PDF
+                    </a>
+                  )}
+                  {paper.bibtex && (
+                    <a
+                      href={paper.bibtex}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-sm btn-outline"
+                    >
+                      BibTeX
+                    </a>
+                  )}
+                  {paper.link && (
+                    <a
+                      href={paperUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-sm btn-secondary text-secondary-content"
+                    >
+                      Read Paper
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>
